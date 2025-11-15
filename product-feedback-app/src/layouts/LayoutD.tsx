@@ -1,9 +1,11 @@
 import { Outlet } from 'react-router';
 
+import HeaderSimple from '../components/headers/HeaderSimple';
+
 export default function LayoutD() {
   return (
     <>
-      <h1>Hello World D</h1>
+      <HeaderSimple hasEditButton={false} />
 
       <Outlet />
     </>

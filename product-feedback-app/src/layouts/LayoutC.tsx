@@ -1,9 +1,11 @@
 import { Outlet } from 'react-router';
 
+import HeaderSimple from '../components/headers/HeaderSimple';
+
 export default function LayoutC() {
   return (
     <>
-      <h1>Hello World C</h1>
+      <HeaderSimple hasEditButton={true} />
 
       <Outlet />
     </>
