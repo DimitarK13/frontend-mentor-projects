@@ -1,0 +1,71 @@
+:root {
+  --clr-primary-purlpe: #ad1fea;
+  --clr-primary-blue: #4661e6;
+  --clr-secondary-blue: #62bcfa;
+  --clr-secondary-orange: #f49f85;
+
+  --clr-neutral-100: #ffffff;
+  --clr-neutral-200: #f7f8fd;
+  --clr-neutral-300: #f2f4ff;
+  --clr-neutral-700: #647196;
+  --clr-neutral-800: #3a4374;
+  --clr-neutral-900: #4661e6;
+
+  --font-family: 'Jost', sans-serif;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  min-height: 100vh;
+  scroll-behavior: smooth;
+  text-rendering: optimizeSpeed;
+
+  font-family: var(--font-family);
+}
+
+ul[class],
+ol[class] {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+img,
+svg,
+iframe,
+video {
+  max-width: 100%;
+  display: block;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+  background-color: transparent;
+  border: 0;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
