@@ -1,3 +1,9 @@
+import Header from '../components/headers/Header';
+
 export default function Index() {
-  return <h1>Homepage</h1>;
+  return (
+    <>
+      <Header title="Frontend Mentor" subtitle="Feedback Board" />
+    </>
+  );
 }
