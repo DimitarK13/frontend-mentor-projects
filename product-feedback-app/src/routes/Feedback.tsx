@@ -1,3 +1,9 @@
+import HeaderSimple from '../components/headers/HeaderSimple';
+
 export default function Feedback() {
-  return <h1>Feedback</h1>;
+  return (
+    <>
+      <HeaderSimple hasEditButton={true} />
+    </>
+  );
 }
