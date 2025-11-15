@@ -1,9 +1,10 @@
 import { Outlet } from 'react-router';
+import HeaderRoadmap from '../components/headers/HeaderRoadmap';
 
 export default function LayoutB() {
   return (
     <>
-      <h1>Hello World B</h1>
+      <HeaderRoadmap title="Roadmap" />
 
       <Outlet />
     </>
