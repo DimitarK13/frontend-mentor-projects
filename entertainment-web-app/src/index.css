@@ -195,3 +195,34 @@ button {
   top: 16px;
   right: 16px;
 }
+
+.card-header {
+  margin-top: 8px;
+  display: grid;
+  gap: 8px;
+}
+
+.card-header-info,
+.card-header-info span {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+
+  font-size: 11px;
+  opacity: 75%;
+}
+
+.card-header-title {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  .card-header-info,
+  .card-header-info span {
+    font-size: 13px;
+  }
+
+  .card-header-title {
+    font-size: 18px;
+  }
+}
