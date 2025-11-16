@@ -176,3 +176,22 @@ button {
     margin-top: auto;
   }
 }
+
+/* Preview Cards */
+.card {
+  position: relative;
+  list-style: none;
+}
+
+.card-bookmark {
+  width: 32px;
+  height: 32px;
+  display: grid;
+  place-content: center;
+  background-color: rgb(16 20 30 / 0.5);
+  border-radius: 100%;
+
+  position: absolute;
+  top: 16px;
+  right: 16px;
+}
