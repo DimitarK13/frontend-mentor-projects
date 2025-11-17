@@ -183,6 +183,34 @@ button {
   list-style: none;
 }
 
+.card.trending {
+  width: 240px;
+}
+
+.card.trending .card-header {
+  width: 100%;
+  padding: 14px 16px;
+  background-image: linear-gradient(to bottom, transparent, rgb(0 0 0 / 0.75));
+  border-radius: 0 0 8px 8px;
+
+  position: absolute;
+  left: 0;
+  bottom: 0;
+}
+
+.card.trending .card-header-info,
+.card.trending .card-header-info span {
+  font-size: 12px;
+}
+
+.card.trending .card-header-title {
+  font-size: 15px;
+}
+
+.card.trending .card-image {
+  height: 140px;
+}
+
 .card-image {
   width: 100%;
   height: 110px;
@@ -216,17 +244,40 @@ button {
   gap: 8px;
 
   font-size: 11px;
+  font-weight: 300;
   opacity: 75%;
 }
 
 .card-header-title {
   font-size: 14px;
+  font-weight: 500;
 }
 
 @media (min-width: 768px) {
+  .card.trending {
+    width: 470px;
+  }
+
   .card-bookmark {
     top: 16px;
     right: 16px;
+  }
+
+  .card.trending .card-header {
+    padding: 21.5px 24px;
+  }
+
+  .card.trending .card-image {
+    height: 230px;
+  }
+
+  .card.trending .card-header-info,
+  .card.trending .card-header-info span {
+    font-size: 15px;
+  }
+
+  .card.trending .card-header-title {
+    font-size: 24px;
   }
 
   .card-header-info,

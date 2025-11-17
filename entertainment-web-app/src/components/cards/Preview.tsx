@@ -9,6 +9,7 @@ interface PreviewTypes {
   category: Categories;
   rating: string;
   isBookmarked: boolean;
+  isTrending: boolean;
   thumbnail: {
     small: string;
     medium: string;
@@ -16,9 +17,9 @@ interface PreviewTypes {
   };
 }
 
-export default function Preview({ title, year, category, rating, isBookmarked, thumbnail }: PreviewTypes) {
+export default function Preview({ title, year, category, rating, isBookmarked, isTrending, thumbnail }: PreviewTypes) {
   return (
-    <li className="card">
+    <li className={`card ${isTrending ? 'trending' : ''}`}>
       <article className="card-inner">
         <div className="card-image-container">
           <picture>
