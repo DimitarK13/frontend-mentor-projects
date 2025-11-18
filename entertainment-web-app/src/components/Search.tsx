@@ -11,6 +11,9 @@ export default function Search({ placeholder, onSearch }: SearchTypes) {
       <img className="search-icon" src={searchIcon} alt="Search icon" />
 
       <div className="search-wrap">
+        <label className="sr-only" htmlFor="search">
+          {placeholder}
+        </label>
         <input
           className="search-input"
           type="text"
