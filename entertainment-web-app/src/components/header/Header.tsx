@@ -11,6 +11,8 @@ export default function Header() {
     <header className="header">
       <img className="header-logo" src={logo} alt="Logo Icon" />
 
+      <h1 className="sr-only">Entertainment Web App</h1>
+
       <nav className="header-nav">
         <NavItem url="/" imageSrc={navHome} />
         <NavItem url="movies" imageSrc={navMovies} />
