@@ -2,13 +2,16 @@ import { NavLink } from 'react-router';
 
 interface NavItemTypes {
   url: string;
-  imageSrc: string;
+  image: {
+    src: string;
+    alt: string;
+  };
 }
 
-export default function NavItem({ url, imageSrc }: NavItemTypes) {
+export default function NavItem({ url, image }: NavItemTypes) {
   return (
     <NavLink className="header-nav-item" to={url}>
-      <img src={imageSrc} alt="icon" />
+      <img {...image} />
     </NavLink>
   );
 }
