@@ -1,37 +1,22 @@
-import { useState } from 'react';
-
-import ResultsList from '../components/ResultsList';
-
 import data from '../../data.json';
-import Search from '../components/Search';
+import FilteredListPage from '../components/FilteredListPage';
 
 export default function Home() {
-  const [searchQuery, setSearchQuery] = useState('');
-
-  function handleSearch(query: string) {
-    setSearchQuery(query);
-  }
-
   return (
-    <>
-      <Search placeholder="Search for movies or TV series" onSearch={handleSearch} />
-
-      {searchQuery && (
-        <ResultsList
-          title={`Found ${
-            data.filter((item) => item.title.toLowerCase().includes(searchQuery.toLowerCase())).length
-          } results for  '${searchQuery}'`}
-          data={data.filter((item) => item.title.toLowerCase().includes(searchQuery.toLowerCase()))}
-          isTrending={false}
-        />
-      )}
-
-      {!searchQuery && (
-        <>
-          <ResultsList title="Trending" data={data.filter((item) => item.isTrending)} isTrending={true} />
-          <ResultsList title="Recommended for you" data={data.filter((item) => !item.isTrending)} isTrending={false} />
-        </>
-      )}
-    </>
+    <FilteredListPage
+      placeholder="Search for movies or TV series"
+      baseTitle="Trending"
+      filterFn={(item) => item.isTrending}
+      searchFn={(item) => (item ? true : false)}
+      data={data}
+      isTrending={true}
+      extraSections={[
+        {
+          title: 'Recommended for you',
+          filterFn: (item) => !item.isTrending,
+          isTrending: false,
+        },
+      ]}
+    />
   );
 }
