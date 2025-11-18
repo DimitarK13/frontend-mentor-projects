@@ -1,6 +1,8 @@
 import Bookmark from './Bookmark';
 import Header from './Header';
 
+import playIcon from '../../assets/icon-play.svg';
+
 type Categories = 'Movie' | 'TV Series';
 
 interface PreviewTypes {
@@ -28,6 +30,11 @@ export default function Preview({ title, year, category, rating, isBookmarked, i
 
             <img className="card-image" src={thumbnail.small} alt={`${title} (${year}) Thumbnail`} loading="lazy" />
           </picture>
+
+          <button className="card-play">
+            <img className="card-play-icon" src={playIcon} alt="Play button" />
+            <p className="card-play-text">Play</p>
+          </button>
 
           <Bookmark isBookmarked={isBookmarked} />
         </div>
