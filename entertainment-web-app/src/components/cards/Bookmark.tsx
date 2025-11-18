@@ -12,7 +12,7 @@ export default function Bookmark({ isBookmarked, title }: BookmarkTypes) {
   const { toggleBookmark } = useData();
 
   return (
-    <button className="card-bookmark" onClick={() => toggleBookmark(title)}>
+    <button className="card-bookmark" aria-label="Add to bookmarked" onClick={() => toggleBookmark(title)}>
       <img src={isBookmarked ? iconBookmarkFull : iconBookmarkEmpty} alt="Bookmark icon" />
     </button>
   );
