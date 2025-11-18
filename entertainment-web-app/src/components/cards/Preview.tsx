@@ -10,17 +10,30 @@ export default function Preview({ title, year, category, rating, isBookmarked, i
     <li className={`card ${isTrending ? 'trending' : ''}`}>
       <article className="card-inner">
         <div className="card-image-container">
-          <picture>
-            <source media="(min-width: 1080px)" srcSet={thumbnail.regular.large} />
-            <source media="(min-width: 768px)" srcSet={thumbnail.regular.medium} />
+          {isTrending ? (
+            <picture>
+              <source media="(min-width: 768px)" srcSet={thumbnail.trending!.large} />
 
-            <img
-              className="card-image"
-              src={thumbnail.regular.small}
-              alt={`${title} (${year}) Thumbnail`}
-              loading="lazy"
-            />
-          </picture>
+              <img
+                className="card-image"
+                src={thumbnail.trending!.small}
+                alt={`${title} (${year}) Thumbnail`}
+                loading="lazy"
+              />
+            </picture>
+          ) : (
+            <picture>
+              <source media="(min-width: 1080px)" srcSet={thumbnail.regular.large} />
+              <source media="(min-width: 768px)" srcSet={thumbnail.regular.medium} />
+
+              <img
+                className="card-image"
+                src={thumbnail.regular.small}
+                alt={`${title} (${year}) Thumbnail`}
+                loading="lazy"
+              />
+            </picture>
+          )}
 
           <button className="card-play">
             <img className="card-play-icon" src={playIcon} alt="Play button" />
