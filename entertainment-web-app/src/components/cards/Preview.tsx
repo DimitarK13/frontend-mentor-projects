@@ -14,7 +14,7 @@ export default function Preview({ title, year, category, rating, isBookmarked, i
 
           <Play />
 
-          <Bookmark isBookmarked={isBookmarked} />
+          <Bookmark isBookmarked={isBookmarked} title={title} />
         </div>
 
         <Header title={title} year={year} category={category} rating={rating} />

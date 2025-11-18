@@ -1,7 +1,10 @@
-import data from '../../data.json';
+import { useData } from '../context/useData';
+
 import FilteredListPage from '../components/FilteredListPage';
 
 export default function Series() {
+  const { data } = useData();
+
   return (
     <FilteredListPage
       placeholder="Search for TV series"
