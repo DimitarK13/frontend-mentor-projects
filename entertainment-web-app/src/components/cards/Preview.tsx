@@ -1,34 +1,25 @@
+import { type ItemType } from '../../types';
+
 import Bookmark from './Bookmark';
 import Header from './Header';
 
 import playIcon from '../../assets/icon-play.svg';
 
-type Categories = 'Movie' | 'TV Series';
-
-interface PreviewTypes {
-  title: string;
-  year: number;
-  category: Categories;
-  rating: string;
-  isBookmarked: boolean;
-  isTrending: boolean;
-  thumbnail: {
-    small: string;
-    medium: string;
-    large: string;
-  };
-}
-
-export default function Preview({ title, year, category, rating, isBookmarked, isTrending, thumbnail }: PreviewTypes) {
+export default function Preview({ title, year, category, rating, isBookmarked, isTrending, thumbnail }: ItemType) {
   return (
     <li className={`card ${isTrending ? 'trending' : ''}`}>
       <article className="card-inner">
         <div className="card-image-container">
           <picture>
-            <source media="(min-width: 1080px)" srcSet={thumbnail.large} />
-            <source media="(min-width: 768px)" srcSet={thumbnail.medium} />
+            <source media="(min-width: 1080px)" srcSet={thumbnail.regular.large} />
+            <source media="(min-width: 768px)" srcSet={thumbnail.regular.medium} />
 
-            <img className="card-image" src={thumbnail.small} alt={`${title} (${year}) Thumbnail`} loading="lazy" />
+            <img
+              className="card-image"
+              src={thumbnail.regular.small}
+              alt={`${title} (${year}) Thumbnail`}
+              loading="lazy"
+            />
           </picture>
 
           <button className="card-play">

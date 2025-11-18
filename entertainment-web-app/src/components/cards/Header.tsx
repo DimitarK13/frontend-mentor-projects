@@ -1,12 +1,10 @@
 import iconMovie from '../../assets/icon-category-movie.svg';
 import iconSeries from '../../assets/icon-category-tv.svg';
 
-type Categories = 'Movie' | 'TV Series';
-
 interface HeaderTypes {
   title: string;
   year: number;
-  category: Categories;
+  category: string;
   rating: string;
 }
 
