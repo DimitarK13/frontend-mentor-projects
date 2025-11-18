@@ -43,7 +43,7 @@ export default function ResultsList({ title, data, isTrending }: DefaultTypes) {
               category={item.category as Categories}
               rating={item.rating}
               isBookmarked={item.isBookmarked}
-              isTrending={item.isTrending}
+              isTrending={isTrending ? item.isTrending : false}
               thumbnail={item.thumbnail.regular}
             />
           );
