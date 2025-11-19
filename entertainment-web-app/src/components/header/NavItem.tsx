@@ -11,7 +11,7 @@ interface NavItemTypes {
 export default function NavItem({ url, image }: NavItemTypes) {
   return (
     <NavLink className="header-nav-item" to={url}>
-      <img {...image} />
+      <img src={image.src} alt={`${image.alt} Icon`} />
       <p className="sr-only">{image.alt}</p>
     </NavLink>
   );
