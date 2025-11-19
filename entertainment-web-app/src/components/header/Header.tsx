@@ -14,10 +14,10 @@ export default function Header() {
       <h1 className="sr-only">Entertainment Web App</h1>
 
       <nav className="header-nav">
-        <NavItem url="/" image={{ src: navHome, alt: 'Home Icon' }} />
-        <NavItem url="movies" image={{ src: navMovies, alt: 'Movies Icon' }} />
-        <NavItem url="series" image={{ src: navSeries, alt: 'Series Icon' }} />
-        <NavItem url="bookmarked" image={{ src: navBookmark, alt: 'Bookmarks Icon' }} />
+        <NavItem url="/" image={{ src: navHome, alt: 'Home' }} />
+        <NavItem url="movies" image={{ src: navMovies, alt: 'Movies' }} />
+        <NavItem url="series" image={{ src: navSeries, alt: 'Series' }} />
+        <NavItem url="bookmarked" image={{ src: navBookmark, alt: 'Bookmarks' }} />
       </nav>
 
       <img className="header-avatar" src={avatar} alt="Avatar Image" />

@@ -12,6 +12,7 @@ export default function NavItem({ url, image }: NavItemTypes) {
   return (
     <NavLink className="header-nav-item" to={url}>
       <img {...image} />
+      <p className="sr-only">{image.alt}</p>
     </NavLink>
   );
 }
