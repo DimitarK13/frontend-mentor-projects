@@ -199,6 +199,7 @@ button {
 
   .header-nav {
     flex-direction: column;
+    gap: 40px;
   }
 
   .header-avatar {
@@ -286,7 +287,7 @@ button {
 
   font-size: 11px;
   font-weight: 300;
-  opacity: 75%;
+  color: rgb(256 256 256 / 0.75);
 }
 
 .card-header-title {
@@ -390,6 +391,10 @@ button {
   padding-inline: 16px 0;
 }
 
+.results.trending .results-header {
+  margin-bottom: 16px;
+}
+
 .results-header {
   margin-bottom: 24px;
   font-size: 20px;
@@ -415,6 +420,10 @@ button {
 
   .results.trending {
     padding-inline: 24px 0;
+  }
+
+  .results.trending .results-header {
+    margin-bottom: 24px;
   }
 
   .results-header {
