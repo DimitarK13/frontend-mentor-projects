@@ -4,6 +4,6 @@
   margin-inline: auto;
 
   @media (min-width: 992px) {
-    max-width: 1280px;
+    max-width: calc(1280px + 32px);
   }
 }
