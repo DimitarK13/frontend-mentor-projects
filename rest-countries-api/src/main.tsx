@@ -1,15 +1,19 @@
 import { StrictMode } from 'react';
 import { createRoot } from 'react-dom/client';
+import { BrowserRouter, Route, Routes } from 'react-router';
 
 import App from './App.tsx';
-import { BrowserRouter, Route, Routes } from 'react-router';
+import Home from './routes/Home.tsx';
+import Single from './routes/Single.tsx';
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
     <BrowserRouter>
       <Routes>
-        <Route index element={<App />} />
-        <Route path=":code" element={<App />} />
+        <Route element={<App />}>
+          <Route index element={<Home />} />
+          <Route path=":code" element={<Single />} />
+        </Route>
       </Routes>
     </BrowserRouter>
   </StrictMode>
