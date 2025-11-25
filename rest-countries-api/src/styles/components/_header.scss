@@ -1,0 +1,40 @@
+.c-header {
+  padding-block: 30px;
+  box-shadow: 0 2px 4px rgb(0 0 0 / 5.62%);
+
+  &__layout {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__title {
+    font-size: 14px;
+    font-weight: 800;
+    line-height: 137.5%;
+
+    @media (min-width: 992px) {
+      font-size: 24px;
+    }
+  }
+
+  &__toggle {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 137.5%;
+    color: $clr-neutral-dark;
+
+    @media (min-width: 992px) {
+      font-size: 16px;
+      line-height: 200%;
+
+      img {
+        width: 20px;
+        height: 20px;
+      }
+    }
+  }
+}
