@@ -32,7 +32,7 @@ export default function Home() {
   }, []);
 
   return (
-    <section>
+    <section className="s-home">
       {countries.map((country) => (
         <Card key={country.code} country={country} />
       ))}
