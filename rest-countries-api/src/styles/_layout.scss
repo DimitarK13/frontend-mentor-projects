@@ -1,0 +1,9 @@
+.container {
+  padding-inline: 16px;
+  max-width: 686px;
+  margin-inline: auto;
+
+  @media (min-width: 992px) {
+    max-width: 1280px;
+  }
+}
