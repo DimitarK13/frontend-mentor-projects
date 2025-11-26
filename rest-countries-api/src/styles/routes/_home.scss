@@ -1,11 +1,11 @@
 .s-home {
-  margin-top: 32px;
+  margin-block: 32px;
   display: grid;
   justify-items: center;
   gap: 40px;
 
   @media (min-width: 692px) {
-    margin-top: 48px;
+    margin-block: 48px;
     grid-template-columns: repeat(2, 1fr);
     gap: 72px;
   }
