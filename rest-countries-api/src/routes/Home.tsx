@@ -9,7 +9,7 @@ export default function Home() {
   useEffect(() => {
     const fetchCountries = async () => {
       const countries = await fetch(
-        'https://restcountries.com/v3.1/all?fields=name,flags,population,region,capital,cca3,ccn3'
+        'https://restcountries.com/v3.1/all?fields=name,flags,population,region,capital,cca3'
       );
       const results = await countries.json();
 
@@ -22,7 +22,7 @@ export default function Home() {
           population: c.population,
           region: c.region,
           capital: c.capital[0],
-          code: `${c.cca3}-${c.ccn3}`,
+          code: c.cca3,
         };
 
         setCountries((prevCountries) => [...prevCountries, country]);
