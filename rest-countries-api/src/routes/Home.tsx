@@ -18,7 +18,7 @@ export default function Home() {
       results.forEach((c: any) => {
         const country = {
           image: { src: c.flags.svg, alt: c.flags.alt },
-          name: c.name.official,
+          name: c.name.common,
           population: c.population,
           region: c.region,
           capital: c.capital[0],
