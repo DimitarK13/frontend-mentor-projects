@@ -1,5 +1,7 @@
 import { Link } from 'react-router';
+
 import { type Country } from '../types';
+import { formatPopulation } from '../util/format';
 
 interface CardTypes {
   country: Country;
@@ -15,7 +17,7 @@ export default function Card({ country }: CardTypes) {
 
         <div className="c-card__info">
           <p className="c-card__info-item">
-            Population: <span>{country.population.toLocaleString('en-US')}</span>
+            Population: <span>{formatPopulation(country.population)}</span>
           </p>
           <p className="c-card__info-item">
             Region: <span>{country.region}</span>
