@@ -10,7 +10,7 @@ export default function BackButton() {
             fill-rule="evenodd"
             clip-rule="evenodd"
             d="M6.93514 3.97748L8.32216 5.3033L3.745 9.67852L21.2214 9.67852L21.2214 11.5347L3.745 11.5347L8.32216 15.9099L6.93514 17.2357L5.55931e-05 10.6066L6.93514 3.97748Z"
-            fill="#111517"
+            fill="var(--clr-neutral-950)"
           />
         </g>
       </svg>
