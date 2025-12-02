@@ -23,3 +23,29 @@ export const fetchCountries = async () => {
     return 'An error occured - ' + err;
   }
 };
+
+export const fetchCountriesByRegion = async (region: string) => {
+  try {
+    const data = await fetch(`https://restcountries.com/v3.1/region/${region}`);
+    const response = await data.json();
+
+    if (!response) return;
+
+    return response;
+  } catch (err) {
+    return 'An error occured - ' + err;
+  }
+};
+
+export const fetchCountriesByName = async (search: string) => {
+  try {
+    const data = await fetch(`https://restcountries.com/v3.1/name/${search}`);
+    const response = await data.json();
+
+    if (!response) return;
+
+    return response;
+  } catch (err) {
+    return 'An error occured - ' + err;
+  }
+};
