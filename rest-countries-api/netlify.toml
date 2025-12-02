@@ -1,0 +1,10 @@
+[build]
+  base    = "rest-countries-api"
+  command = "npm run build"
+  publish = "dist"
+
+# SPA redirect (fix refresh 404)
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
