@@ -52,6 +52,6 @@ In the future I would love to try out TailwindCSS. For this project I decided to
 
 ## Author
 
-- Website - [Add your name here](https://dimitark.com)
-- Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/DimitarK13)
-- Twitter - [@yourusername](https://x.com/dimitar_kalapoc)
+- Website - [Dimitar Kalapocev](https://dimitark.com)
+- Frontend Mentor - [@DimitarK13](https://www.frontendmentor.io/profile/DimitarK13)
+- Twitter - [@dimitar_kalapoc](https://x.com/dimitar_kalapoc)
