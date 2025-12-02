@@ -1,21 +1,20 @@
 import { useEffect, useState } from 'react';
-import { type Country } from '../types';
+import { type Country, type CountryFull } from '../types';
+import { fetchCountries } from '../util/fetch';
 
 import Card from '../components/Card';
 
 export default function Home() {
   const [countries, setCountries] = useState<Country[]>([]);
+  const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
-    const fetchCountries = async () => {
-      const countries = await fetch(
-        'https://restcountries.com/v3.1/all?fields=name,flags,population,region,capital,cca3'
-      );
-      const results = await countries.json();
+    const fetch = async () => {
+      setIsLoading(true);
 
-      if (!results) return;
+      const results = await fetchCountries();
 
-      results.forEach((c: any) => {
+      results.forEach((c: CountryFull) => {
         const country = {
           image: { src: c.flags.svg, alt: c.flags.alt },
           name: c.name.common,
@@ -27,9 +26,13 @@ export default function Home() {
 
         setCountries((prevCountries) => [...prevCountries, country]);
       });
+
+      setIsLoading(false);
     };
-    fetchCountries();
+    fetch();
   }, []);
+
+  if (isLoading) return <p>Loading...</p>;
 
   return (
     <section className="s-home">
